@@ -420,4 +420,5 @@ function goodbyeTyler()
         }
     }
 }
+goodbyeTyler();
 //The activity we just did is very much how data works in 'the real world'.

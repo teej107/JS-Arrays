@@ -264,11 +264,11 @@ function longer(arr1, arr2)
 function both(arr1, arr2)
 {
     var value = [];
-    for(var e in arr1)
+    for (var e in arr1)
     {
-        for(var i in arr2)
+        for (var i in arr2)
         {
-            if(arr1[e] === arr2[i])
+            if (arr1[e] === arr2[i])
             {
                 value.push(arr2[i]);
             }
@@ -311,12 +311,34 @@ var colt = {
  sure that it's equal to 4. */
 
 //Code Here
+function devMtnEmployees()
+{
+    devMountainEmployees.push(tyler);
+    devMountainEmployees.push(cahlan);
+    devMountainEmployees.push(ryan);
+    devMountainEmployees.push(colt);
+}
+
+devMtnEmployees();
+console.log(devMountainEmployees.length);
 
 /*Now let's say Cahlan has a mental breakdown and has to take a leave of absence to 'find himself'.
  Loop through your devMountainEmployees until you find cahlan, then remove him from the array.*/
 
 //Code Here
+function removeCahlan()
+{
+    for (var e in devMountainEmployees)
+    {
+        if (devMountainEmployees[e]["name"] === "Cahlan")
+        {
+            devMountainEmployees.splice(e, 1);
+        }
+    }
+}
 
+removeCahlan();
+console.log(devMountainEmployees.length);
 
 //NEXT PROBLEM
 
@@ -353,7 +375,7 @@ var data = [
 //Create an empty array called users.
 
 //Code Here
-
+var users = [];
 /*Now add three user objects to your users array. Each user object should contain the
  following properties. name, email, password, username.*/
 
@@ -366,6 +388,17 @@ var user1 = {
 };
 
 //Your Code Here
+function addUser(name, email, password, username)
+{
+    return {
+        name: name,
+        email: email,
+        password: password,
+        username: username
+    };
+}
+users.push(user1, addUser("Tanner", "tanner@tanner.com", "abc123", "tan"), addUser("Teej", "teej@tanner.com", "teejrox", "teej107"),
+    addUser("Me", "My@self.com", "and", "I"));
 
 /*Now you have a very common data structure. Twitter is a good use case.
  It's easy to imagine that your followers list on Twitter is an Array full or objects
@@ -376,5 +409,15 @@ var user1 = {
  Once you find the particular index he's located in, delete him from the array.*/
 
 //Code Here
-
+function goodbyeTyler()
+{
+    for(var e in users)
+    {
+        if(users[e].name === "Tyler McGinnis")
+        {
+            users.splice(e, 1);
+            return;
+        }
+    }
+}
 //The activity we just did is very much how data works in 'the real world'.
